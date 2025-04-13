@@ -3,11 +3,24 @@
     <Metadata>
         <Identity Id="LocalFocusTimeTracker.ba9e48b4-68bc-480c-bd45-c71fedf48b2d" Version="1.1.0" Language="en-US" Publisher="LocalFocusTimeTracker" />
         <DisplayName>LocalFocusTimeTracker</DisplayName>
-        <Description xml:space="preserve">Tracks time spent in Visual Studio when active</Description>
+        <Description xml:space="preserve">LocalFocusTimeTracker is a lightweight and privacy-focused Visual Studio 2022 extension that tracks the time you actively spend on each solution — but only when the Visual Studio window is focused.
+
+🕒 Features:
+
+Tracks focused time per solution, resets daily
+
+Displays time in the Visual Studio status bar
+
+Stores data locally in a single JSON file
+
+Includes a beautiful stats window with chart and table
+
+🔒 No telemetry. No cloud. Your time is yours.</Description>
+        <MoreInfo>https://github.com/christian-24/LocalFocusTimeTracker.git</MoreInfo>
         <License>LICENSE.txt</License>
         <Icon>Resources\Icon.png</Icon>
         <PreviewImage>Resources\Icon.png</PreviewImage>
-        <Preview>true</Preview>
+        <Tags>focus time, time tracker, productivity, developer tools, statistics, visual studio extension, vsix, activity tracker</Tags>
     </Metadata>
     <Installation>
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0, 18.0)">
