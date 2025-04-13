@@ -10,11 +10,23 @@ namespace LocalFocusTimeTracker
     {
         public const string Id = "LocalFocusTimeTracker.ba9e48b4-68bc-480c-bd45-c71fedf48b2d";
         public const string Name = "LocalFocusTimeTracker";
-        public const string Description = @"Tracks time spent in Visual Studio when active";
+        public const string Description = @"LocalFocusTimeTracker is a lightweight and privacy-focused Visual Studio 2022 extension that tracks the time you actively spend on each solution — but only when the Visual Studio window is focused.
+
+🕒 Features:
+
+Tracks focused time per solution, resets daily
+
+Displays time in the Visual Studio status bar
+
+Stores data locally in a single JSON file
+
+Includes a beautiful stats window with chart and table
+
+🔒 No telemetry. No cloud. Your time is yours.";
         public const string Language = "en-US";
         public const string Version = "1.1.0";
         public const string Author = "LocalFocusTimeTracker";
-        public const string Tags = "";
-        public const bool IsPreview = true;
+        public const string Tags = "focus time, time tracker, productivity, developer tools, statistics, visual studio extension, vsix, activity tracker";
+        public const bool IsPreview = false;
     }
 }
