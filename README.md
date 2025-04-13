@@ -14,6 +14,21 @@
 
 ---
 
+---
+
+## 📊 Visual Statistics
+
+You can now visualize your daily time logs with a **built-in chart**:
+
+- 🔵 Beautiful **doughnut chart** shows project time distribution
+- 📄 Table below the chart shows exact durations and percentages
+- Fully rendered using **WebView2** and modern HTML5/Chart.js
+
+Access it via:  
+🧭 `Tool > Statistic Time`
+
+---
+
 ## 🔐 Privacy
 
 This extension:

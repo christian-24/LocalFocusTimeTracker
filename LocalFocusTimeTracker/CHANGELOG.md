@@ -7,6 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.1.0] - 2025-04-13
+
+### ✨ Added
+- New **Statistics ToolWindow** showing today's time spent per solution
+- HTML-based stats UI rendered using **WebView2**, with elegant dark table and doughnut chart
+- JSON summary (`track.json`) is now visualized as interactive HTML
+- Pie chart powered by **Chart.js** embedded directly in HTML
+- Added support for tracking multiple solutions and showing per-project time breakdown
+- New UI layer: `StatisticsWindow.xaml` used to host `WebView2` for improved modularity
+
+### 🛠️ Changed
+- Refactored JSON save logic to preserve unrelated projects in the data file
+- Moved `SaveTime` and `ClearTime` logic to per-project-safe updates
+- Added daily cleanup for outdated time entries
+
+---
+
 ## [1.0.0] - 2025-03-28
 
 ### ✨ Added
