@@ -14,8 +14,6 @@
 
 ---
 
----
-
 ## 📊 Visual Statistics
 
 You can now visualize your daily time logs with a **built-in chart**:
