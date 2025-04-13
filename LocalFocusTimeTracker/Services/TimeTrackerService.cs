@@ -22,6 +22,7 @@ namespace LocalFocusTimeTracker.Services
             {
                 Interval = TimeSpan.FromSeconds(1)
             };
+
             _timer.Tick += (s, e) =>
             {
                 ThreadHelper.ThrowIfNotOnUIThread();
@@ -34,6 +35,7 @@ namespace LocalFocusTimeTracker.Services
                     UpdateStatusBar(dte);
                 }
             };
+
             _timer.Start();
         }
 

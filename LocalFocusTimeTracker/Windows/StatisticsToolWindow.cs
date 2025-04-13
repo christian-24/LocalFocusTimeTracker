@@ -1,15 +1,4 @@
-﻿using Microsoft.VisualStudio.Shell;
-using System;
-using System.Runtime.InteropServices;
-using System.Windows.Controls;
-using Microsoft.Web.WebView2.Wpf;
-using System.IO;
-using System.Text.Json;
-using System.Collections.Generic;
-using System.Linq;
-using LocalFocusTimeTracker.Dtos;
-using System.Windows;
-using LocalFocusTimeTracker.Forms;
+﻿using System.Runtime.InteropServices;
 
 namespace LocalFocusTimeTracker.ToolWindows
 {
@@ -19,7 +8,7 @@ namespace LocalFocusTimeTracker.ToolWindows
         public StatisticsToolWindow() : base(null)
         {
             this.Caption = "Project Time Stats";
-            this.Content = new LocalFocusTimeTracker.Forms.StatisticsWindow();
+            this.Content = new Forms.StatisticsWindow();
         }
     }
 }

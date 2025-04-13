@@ -1,5 +1,4 @@
 ﻿using LocalFocusTimeTracker.ToolWindows;
-using System.Linq;
 
 namespace LocalFocusTimeTracker.Commands
 {
