@@ -8,13 +8,13 @@ namespace LocalFocusTimeTracker
 {
     internal sealed partial class Vsix
     {
-        public const string Id = "LocalFocusTimeTracker.ba9e48b4-68bc-480c-bd45-c71fedf48b2d";
+        public const string Id = "LocalFocusTimeTracker.353af322-f159-4c79-befc-333a06d6b2ae";
         public const string Name = "LocalFocusTimeTracker";
         public const string Description = @"Tracks time spent in Visual Studio when active";
         public const string Language = "en-US";
-        public const string Version = "1.1.0";
-        public const string Author = "LocalFocusTimeTracker";
-        public const string Tags = "";
-        public const bool IsPreview = true;
+        public const string Version = "1.2.0";
+        public const string Author = "christian_24_projects";
+        public const string Tags = "focus time, time tracker, productivity, developer tools, statistics, visual studio extension, vsix, activity tracker";
+        public const bool IsPreview = false;
     }
 }
