@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="LocalFocusTimeTracker.353af322-f159-4c79-befc-333a06d6b2ae" Version="1.2.0" Language="en-US" Publisher="christian_24_projects" />
+        <Identity Id="LocalFocusTimeTracker.353af322-f159-4c79-befc-333a06d6b2ae" Version="1.2.1" Language="en-US" Publisher="christian_24_projects" />
         <DisplayName>LocalFocusTimeTracker</DisplayName>
         <Description xml:space="preserve">Tracks time spent in Visual Studio when active</Description>
         <MoreInfo>https://github.com/christian-24/LocalFocusTimeTracker.git</MoreInfo>

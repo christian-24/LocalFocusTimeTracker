@@ -35,9 +35,36 @@ namespace LocalFocusTimeTracker.Helpers
                         th {{
                             background: #2d2d30;
                         }}
+                        .refresh-btn {{
+                                background-color: #007acc;
+                                color: white;
+                                border: none;
+                                padding: 10px 20px;
+                                font-size: 14px;
+                                border-radius: 4px;
+                                cursor: pointer;
+                                margin-bottom: 20px;
+                                transition: background-color 0.2s ease;
+                            }}
+
+                        .refresh-btn:hover {{
+                            background-color: #005f99;
+                        }}
                     </style>
+                <script>
+                    function refreshStats() {{
+                        if (window.chrome && window.chrome.webview) {{
+                            window.chrome.webview.postMessage('refresh');
+                        }} else {{
+                            alert(""WebView2 not available."");
+                        }}
+                    }}
+                </script>
                 </head>
                 <body>
+                    <div style=""display: flex; justify-content: flex-end;"">
+                        <button onclick=""refreshStats()"" class=""refresh-btn"">🔄 Refresh data</button>
+                    </div>
                     <h1>📊 Projects Today</h1>
 
                     <div style='display: flex; justify-content: center; align-items: center; margin-bottom: 40px; width: 100%;'>

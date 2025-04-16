@@ -15,34 +15,12 @@ namespace LocalFocusTimeTracker.Forms
         public StatisticsWindow()
         {
             InitializeComponent();
-            LoadData();
             Loaded += MainWindow_Loaded;
         }
 
         private async void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            string userDataFolder = PathHelper.GetWebView2DemoUserDataPath();
-
-            try
-            {
-                var env = await CoreWebView2Environment.CreateAsync(null, userDataFolder);
-
-                await MyWebView.EnsureCoreWebView2Async(env);
-
-                var htmlPath = PathHelper.GetIndexHtmlPath();
-
-                if (!File.Exists(htmlPath))
-                {
-                    File.WriteAllText(htmlPath, "<html><body><h1>Brak danych</h1></body></html>");
-                }
-
-                var fixedPath = "file:///" + htmlPath.Replace("\\", "/");
-                MyWebView.Source = new Uri(fixedPath);
-            }
-            catch (Exception ex)
-            {
-                System.Windows.MessageBox.Show("Error WebView2: " + ex.Message);
-            }
+            await LoadWebViewAsync();
         }
 
         private void LoadData()
@@ -84,6 +62,62 @@ namespace LocalFocusTimeTracker.Forms
             var indexPath = PathHelper.GetIndexHtmlPath();
 
             File.WriteAllText(indexPath, html);
+        }
+
+        private async Task LoadWebViewAsync()
+        {
+            try
+            {
+                LoadData();
+
+                var userDataFolder = PathHelper.GetWebView2DemoUserDataPath();
+                var htmlPath = PathHelper.GetIndexHtmlPath();
+
+                if (!File.Exists(htmlPath))
+                {
+                    File.WriteAllText(htmlPath, "<html><body><h1>Brak danych</h1></body></html>");
+                }
+
+                var fixedPath = "file:///" + htmlPath.Replace("\\", "/");
+
+                if (MyWebView.CoreWebView2 != null)
+                {
+                    MyWebView.Reload();
+
+                    return;
+                }
+
+                var env = await CoreWebView2Environment.CreateAsync(null, userDataFolder);
+                await MyWebView.EnsureCoreWebView2Async(env);
+
+                MyWebView.CoreWebView2.WebMessageReceived += (_, args) =>
+                {
+                    var message = args.TryGetWebMessageAsString();
+
+                    if (message == "refresh")
+                    {
+                        RefreshData();
+                    }
+                };
+
+                MyWebView.Source = new Uri(fixedPath);
+            }
+            catch (Exception ex)
+            {
+                System.Windows.MessageBox.Show("Error WebView2: " + ex.Message);
+            }
+        }
+
+        private void RefreshData()
+        {
+            LoadData();
+
+            var htmlPath = PathHelper.GetIndexHtmlPath();
+            var fixedPath = "file:///" + htmlPath.Replace("\\", "/");
+
+            MyWebView.Source = new Uri(fixedPath);
+
+            MyWebView.Reload();
         }
     }
 }
