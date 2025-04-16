@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),  
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+
+## [1.2.1] - 2025-04-16
+
+### 🐛 Fixed
+- Fixed WebView2 error when reopening the statistics window (`WebView2 already initialized` or `Access Denied`)
+- WebView2 instance is now safely reused and HTML reloaded on refresh
+- Avoided file access conflicts by ensuring shared HTML path reuse without regeneration collisions
+
+---
+
+## [1.2.0] - 2025-04-15
+
+### 🛠️ Changed
+- Updated project metadata to set `"christian-24"` as the official Author of the extension
+- Renamed `Vsix.Author` and adjusted manifest consistency
+
 ---
 
 ## [1.1.0] - 2025-04-13
